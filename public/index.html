@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Studio - Coming Soon</title>
+    <meta name="description" content="Raw Studio - Professional creative studio coming November 2025. Join our Discord community today!">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzg5NzNkOCIvPgo8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPng8L3RleHQ+Cjwvc3ZnPgo=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-brand">Raw Studio</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="modal admin-modal">
+        <div class="modal-content admin-content">
+            <div class="modal-header">
+                <h2>Admin Access</h2>
+                <span class="close" onclick="closeModal('adminModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="admin-form" onsubmit="handleAdminLogin(event)">
+                    <div class="form-group">
+                        <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+                        <label for="adminPassword">Admin Password</label>
+                    </div>
+                    <button type="submit" class="admin-btn">
+                        <span class="btn-text">Access Dashboard</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </form>
+                <div class="admin-error" id="adminError"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website Content -->
+    <div id="main-content" class="main-website">
+        <!-- Background Animation -->
+        <div class="background-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Header with Owner Info -->
+            <header class="header">
+                <div class="owner-section">
+                    <div class="owner-name">Rashika Agarwal</div>
+                    <div class="brand-name">Raw Studio</div>
+                </div>
+                <!-- Admin Access Button -->
+                <div class="admin-access">
+                    <button class="admin-access-btn" onclick="openAdminModal()" title="Admin Access">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="content-wrapper">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        Website Under Development
+                    </div>
+                    
+                    <h1 class="main-title">
+                        Something <span class="highlight">Amazing</span> is Coming
+                    </h1>
+                    
+                    <p class="subtitle">
+                        We're crafting a revolutionary creative experience that will redefine digital artistry and innovation.
+                    </p>
+
+                    <div class="launch-info">
+                        <div class="launch-date">
+                            <span class="label">Estimated Launch</span>
+                            <span class="date">November 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <button class="discord-btn" onclick="openDiscordModal()">
+                            <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0002 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9554 2.4189-2.1568 2.4189Z"/>
+                            </svg>
+                            Join Our Discord
+                        </button>
+                        
+                        <button class="notify-btn" onclick="openNotifyModal()">
+                            <svg class="notify-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            Get Notified
+                        </button>
+                    </div>
+
+                    <!-- Footer Credits -->
+                    <div class="footer-credits">
+                        <div class="developers">Developed by <strong>Byte</strong> & <strong>Rexx</strong></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Discord Modal -->
+        <div id="discordModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Join Raw Studio Discord</h2>
+                    <span class="close" onclick="closeModal('discordModal')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="discord-preview">
+                        <svg class="discord-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0002 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9554 2.4189-2.1568 2.4189Z"/>
+                        </svg>
+                    </div>
+                    <p>Connect with our community, get exclusive updates, and be the first to experience Raw Studio when we launch!</p>
+                    <div class="modal-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎨</span>
+                            <span>Creative Discussions</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Exclusive Previews</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🚀</span>
+                            <span>Early Access</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://discord.gg/QxbJME6N3r" target="_blank" class="join-discord-btn">
+                        Join Discord Server
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notify Modal -->
+        <div id="notifyModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Get Launch Notification</h2>
+                    <span class="close" onclick="closeModal('notifyModal')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Be the first to know when Raw Studio launches in November 2025!</p>
+                    <form class="notify-form" onsubmit="handleNotifySubmit(event)">
+                        <div class="form-group">
+                            <input type="email" id="notifyEmail" placeholder="Enter your email address" required>
+                            <label for="notifyEmail">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="notifyName" placeholder="Your name (optional)">
+                            <label for="notifyName">Name (Optional)</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Notify Me</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content success-modal">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h2>Thank You!</h2>
+                <p>You'll be the first to know when Raw Studio launches. Check your email for confirmation!</p>
+                <button class="ok-btn" onclick="closeModal('successModal')">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="admin-dashboard" style="display: none;">
+        <header class="admin-header">
+            <div class="admin-title">
+                <h1>Raw Studio Analytics Dashboard</h1>
+                <p>Real-time visitor tracking and analytics</p>
+            </div>
+            <div class="admin-controls">
+                <button class="refresh-btn" onclick="refreshAnalytics()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"/>
+                    </svg>
+                    Refresh
+                </button>
+                <button class="logout-btn" onclick="logoutAdmin()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z"/>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalVisitors">0</h3>
+                        <p>Total Visitors</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="todayVisitors">0</h3>
+                        <p>Today's Visitors</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="uniqueCountries">0</h3>
+                        <p>Countries</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15,9H9V5H15M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A9,9 0 0,0 21,12C21,7.03 16.97,3 12,3Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="vpnUsers">0</h3>
+                        <p>VPN/Proxy Users</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Visitors</h3>
+                        <span class="live-indicator">
+                            <span class="pulse-dot-admin"></span>
+                            Live
+                        </span>
+                    </div>
+                    <div class="visitors-list" id="visitorsList">
+                        <!-- Visitors will be populated here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Location Distribution</h3>
+                    </div>
+                    <div class="location-stats" id="locationStats">
+                        <!-- Location stats will be populated here -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card wide">
+                    <div class="card-header">
+                        <h3>Visitor Timeline</h3>
+                        <div class="timeline-filters">
+                            <button class="filter-btn active" data-filter="24h">24H</button>
+                            <button class="filter-btn" data-filter="7d">7D</button>
+                            <button class="filter-btn" data-filter="30d">30D</button>
+                        </div>
+                    </div>
+                    <div class="timeline-chart" id="timelineChart">
+                        <!-- Timeline chart will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

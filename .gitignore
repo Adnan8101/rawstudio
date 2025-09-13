@@ -1,0 +1,70 @@
+# ===============================================
+# 🔒 Critical Security Files (NEVER COMMIT)
+# ===============================================
+.env
+.env.local
+.env.production
+.env.development
+.env.staging
+.env.test
+**/config/production.js
+**/config/local.js
+
+# ===============================================
+# 📁 Dependencies and Build
+# ===============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# ===============================================
+# 🗄️ Database and Logs
+# ===============================================
+logs/
+*.log
+data/
+db/
+*.sqlite
+*.sqlite3
+*.db
+
+# ===============================================
+# 💻 Development Tools
+# ===============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===============================================
+# 🖥️ OS Generated Files
+# ===============================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+
+# ===============================================
+# 🚀 Deployment and Cache
+# ===============================================
+.vercel/        # Local vercel config (not needed in repo)
+.cache/
+.tmp/
+dist/
+build/
+coverage/
+out/            # Next.js static export
+.next/          # Next.js build folder
+
+# ===============================================
+# 📊 Raw Studio Specific
+# ===============================================
+visitor-analytics.log
+admin-access.log
+db-backup/
+test-visitors.json
