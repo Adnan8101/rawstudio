@@ -10,11 +10,17 @@
     "build": "echo 'Static files ready in public directory'",
     "vercel-build": "echo 'Vercel build completed - static files served from public/'"
   },
-  "keywords": ["raw-studio", "analytics", "visitor-tracking", "express", "mongodb"],
+  "keywords": [
+    "raw-studio",
+    "analytics",
+    "visitor-tracking",
+    "express",
+    "mongodb"
+  ],
   "author": "Rashika Agarwal",
   "license": "MIT",
   "engines": {
-    "node": ">=18.0.0",
+    "node": "18.x",
     "npm": ">=8.0.0"
   },
   "dependencies": {
@@ -27,5 +33,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "volta": {
+    "node": "18.x",
+    "npm": ">=8.0.0"
   }
 }
